@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
-export default function Buttons ({props}) {
+export default function Buttons (props) {
     return (
     <View>
-        <Text>{props}</Text>
+        <TouchableOpacity>
+        <Text>{props.name}</Text>
+        </TouchableOpacity>
     </View>
     )
 }
