@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StatusBar } from "react-native";
 import Buttons from "./Buttons";
 
 export default function HeaderApps() {
   const [activeTab, setActiveTab] = useState("Delivery");
   return (
-    <View style={{ flexDirection: "row", alignSelf: "center", marginTop: 40 }}>
+    <View style={{ flexDirection: "row", alignSelf: "center" }}>
       <HeaderButton
         text="Delivery"
         activeTab={activeTab}
