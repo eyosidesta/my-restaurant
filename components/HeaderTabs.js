@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StatusBar } from "react-native";
 import Buttons from "./Buttons";
 
-export default function HeaderApps() {
-  const [activeTab, setActiveTab] = useState("Delivery");
+export default function HeaderApps(props) {
   return (
     <View style={{ flexDirection: "row", alignSelf: "center" }}>
       <HeaderButton
         text="Delivery"
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        activeTab={props.activeTab}
+        setActiveTab={props.setActiveTab}
       />
       <HeaderButton
         text="Pickup"
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        activeTab={props.activeTab}
+        setActiveTab={props.setActiveTab}
       />
     </View>
   );
