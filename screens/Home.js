@@ -6,6 +6,7 @@ import Categories from "../components/Categories.js";
 import RestaurantItems, {
   localRestaurants,
 } from "../components/RestaurantItems.js";
+import BottomTabs from "../components/BottomTabs.js";
 
 const YELP_API_KEY =
   "6uwx1b4wg1wWNMuAIX5INUl1kTcO2yy2JGVE8D0P2IpUz3WIor6ffsWUJLxM4B98zjjH073qOkkk1p9GqXoD0iDa-RSYQtZ8HOhlVeGiKCYWILh1lkYwSIPTWOTiYXYx";
@@ -53,6 +54,8 @@ export default function Home() {
         <Categories />
         <RestaurantItems restaurantData={restaurantData} />
       </ScrollView>
+      {/* <Divider /> */}
+      <BottomTabs />
     </SafeAreaView>
   );
 }
