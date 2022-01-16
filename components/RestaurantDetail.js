@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome";
 
 const items = {
-  name: "Sascachiwan",
+  name: "FIG Sascachiwan",
   description: "Thai Comfort Food",
   image_url:
     "https://upload.wikimedia.org/wikipedia/commons/e/ef/Restaurant_N%C3%A4sinneula.jpg",
@@ -23,6 +23,7 @@ export default function RestaurantDetail() {
         reviews={items.reviews}
         rating={items.rating}
       />
+      
     </View>
   );
 }
@@ -40,13 +41,21 @@ const RestaurantInfo = (props) => {
     <View>
       <Text style={{ fontWeight: "bold", fontSize: 25, marginTop: 5, marginBottom: 5 }}>{props.name}</Text>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <Text>{props.description} . </Text>
-        <Text>{props.price} . </Text>
-        <FontAwesome5 name="home" />
-        <Text> . {props.reviews} . </Text>
-        <FontAwesome5 name="home" />
-        <Text> . {props.rating} . </Text>
+        <Text style={styles.titleText}>{props.description} . </Text>
+        <Text style={styles.titleText}>{props.price} . </Text>
+        <FontAwesome5 name="home" size={20} />
+        <Text style={styles.titleText}> . {props.rating} . </Text>
+        <FontAwesome5 name="home" size={20} />
+        <Text style={styles.titleText}> . {props.reviews} </Text>
       </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  titleText: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "grey",
+  },
+})
