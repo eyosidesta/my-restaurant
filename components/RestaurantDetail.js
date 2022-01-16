@@ -40,7 +40,7 @@ const RestaurantInfo = (props) => {
     <View>
       <Text style={{ fontWeight: "bold", fontSize: 25, marginTop: 5, marginBottom: 5 }}>{props.name}</Text>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <Text style={}>{props.description} . </Text>
+        <Text>{props.description} . </Text>
         <Text>{props.price} . </Text>
         <FontAwesome5 name="home" />
         <Text> . {props.reviews} . </Text>
