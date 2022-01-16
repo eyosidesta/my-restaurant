@@ -7,6 +7,7 @@ import RestaurantItems, {
   localRestaurants,
 } from "../components/RestaurantItems.js";
 import BottomTabs from "../components/BottomTabs.js";
+import Aboutus from "./Aboutus.js";
 
 const YELP_API_KEY =
   "6uwx1b4wg1wWNMuAIX5INUl1kTcO2yy2JGVE8D0P2IpUz3WIor6ffsWUJLxM4B98zjjH073qOkkk1p9GqXoD0iDa-RSYQtZ8HOhlVeGiKCYWILh1lkYwSIPTWOTiYXYx";
@@ -38,24 +39,27 @@ export default function Home() {
     getRestaurantsFromYelp();
   }, [city, activeTab]);
   return (
-    <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
-      <View
-        style={{
-          backgroundColor: "white",
-          paddingTop: 15,
-          paddingBottom: 10,
-          marginTop: StatusBar.currentHeight,
-        }}
-      >
-        <HeaderApps activeTab={activeTab} setActiveTab={setActiveTab} />
-        <SearchBar cityHandler={setCity} />
-      </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Categories />
-        <RestaurantItems restaurantData={restaurantData} />
-      </ScrollView>
-      {/* <Divider /> */}
-      <BottomTabs />
-    </SafeAreaView>
+    // <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
+    //   <View
+    //     style={{
+    //       backgroundColor: "white",
+    //       paddingTop: 15,
+    //       paddingBottom: 10,
+    //       marginTop: StatusBar.currentHeight,
+    //     }}
+    //   >
+    //     <HeaderApps activeTab={activeTab} setActiveTab={setActiveTab} />
+    //     <SearchBar cityHandler={setCity} />
+    //   </View>
+    //   <ScrollView showsVerticalScrollIndicator={false}>
+    //     <Categories />
+    //     <RestaurantItems restaurantData={restaurantData} />
+    //   </ScrollView>
+    //   {/* <Divider /> */}
+    //   <BottomTabs />
+    // </SafeAreaView>
+    <View>
+      <Aboutus />
+    </View>
   );
 }
