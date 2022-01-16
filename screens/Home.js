@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, SafeAreaView, StatusBar, ScrollView } from "react-native";
+import { Divider } from 'react-native-elements';
 import HeaderApps from "../components/HeaderTabs.js";
 import SearchBar from "../components/SearchBar.js";
 import Categories from "../components/Categories.js";
@@ -8,6 +9,7 @@ import RestaurantItems, {
 } from "../components/RestaurantItems.js";
 import BottomTabs from "../components/BottomTabs.js";
 import Aboutus from "./Aboutus.js";
+// import { Divider } from "react-native-elements/dist/divider/Divider";
 
 const YELP_API_KEY =
   "6uwx1b4wg1wWNMuAIX5INUl1kTcO2yy2JGVE8D0P2IpUz3WIor6ffsWUJLxM4B98zjjH073qOkkk1p9GqXoD0iDa-RSYQtZ8HOhlVeGiKCYWILh1lkYwSIPTWOTiYXYx";
@@ -55,7 +57,8 @@ export default function Home() {
     //     <Categories />
     //     <RestaurantItems restaurantData={restaurantData} />
     //   </ScrollView>
-    //   {/* <Divider /> */}
+    //  <Divider /> 
+    //  <Divider />
     //   <BottomTabs />
     // </SafeAreaView>
     <View>
